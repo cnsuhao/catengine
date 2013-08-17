@@ -1,0 +1,13 @@
+# To build from the command line, your gcc line will look something like this:
+# gcc -I/Library/Frameworks/SDL.framework/Headers MyProgram.c SDLmain.m -framework SDL -framework Cocoa
+#
+# An SDL/OpenGL based application might look like:
+# gcc -I/Library/Frameworks/SDL.framework/Headers -I/System/Library/Frameworks/OpenGL.framework/Headers MyProgram.c SDLmain.m -framework SDL -framework Cocoa -framework OpenGL
+
+SRC=src/MyProgram.cpp src/SDLmain.m 
+CFLAGS=-I/Library/Frameworks/SDL.framework/Headers -Isrc
+LDFLAGS=-framework SDL -framework Cocoa
+
+all:
+	gcc $(CFLAGS) $(SRC) $(LDFLAGS)
+

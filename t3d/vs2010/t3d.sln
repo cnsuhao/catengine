@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "t3dlib", "t3dlib\t3dlib.vcxproj", "{D1F00652-BDD4-446F-B7BE-3C10D6C95A01}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unittest", "unittest\unittest.vcxproj", "{6AF604C9-F30E-4481-B96B-AB6C6AA9B699}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D1F00652-BDD4-446F-B7BE-3C10D6C95A01} = {D1F00652-BDD4-446F-B7BE-3C10D6C95A01}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1F00652-BDD4-446F-B7BE-3C10D6C95A01}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D1F00652-BDD4-446F-B7BE-3C10D6C95A01}.Debug|Win32.Build.0 = Debug|Win32
+		{D1F00652-BDD4-446F-B7BE-3C10D6C95A01}.Release|Win32.ActiveCfg = Release|Win32
+		{D1F00652-BDD4-446F-B7BE-3C10D6C95A01}.Release|Win32.Build.0 = Release|Win32
+		{6AF604C9-F30E-4481-B96B-AB6C6AA9B699}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6AF604C9-F30E-4481-B96B-AB6C6AA9B699}.Debug|Win32.Build.0 = Debug|Win32
+		{6AF604C9-F30E-4481-B96B-AB6C6AA9B699}.Release|Win32.ActiveCfg = Release|Win32
+		{6AF604C9-F30E-4481-B96B-AB6C6AA9B699}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
