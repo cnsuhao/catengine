@@ -4,7 +4,11 @@
 #include "ViewPlane.h"
 #include "Utility/RGBColor.h"
 #include "Utility/ShadeRec.h"
+#if defined(_WIN32)
+#include <SDL.h>
+#else
 #include <SDL2/SDL.h>
+#endif
 
 class Tracer;
 class Ray;

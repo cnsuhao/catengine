@@ -92,7 +92,7 @@ inline bool operator==(const RGBColor& a, const RGBColor& b)
 
 inline float RGBColor::average() const
 {
-	return (0.333333333333 * (r+g+b));
+	return (0.333333333333f * (r+g+b));
 }
 
 #endif

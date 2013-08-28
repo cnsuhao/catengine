@@ -15,8 +15,8 @@ void SphereWorld::build()
 {
 	vp_.setHRes(400);
 	vp_.setVRes(400);
-	vp_.setPixelSize(1.0);
-	vp_.setGamma(1.8);
+	vp_.setPixelSize(1.0f);
+	vp_.setGamma(1.8f);
 
 	pTracer_ = new SingleSphere(this);
 

@@ -21,7 +21,7 @@ public:
 	void setHRes(const int _hRes) { hRes = _hRes; }
 	void setVRes(const int _vRes) { vRes = _vRes; }
 	void setPixelSize(const float size) { s = size; }
-	void setGamma(const float g) { gamma = g; invGamma = 1.0 / g; }
+	void setGamma(const float g) { gamma = g; invGamma = 1.0f / g; }
 	void setGamutDisplay(bool show) { showOutOfGamut = show; }
 	void setSamples(const int n) { numSamples = n; }
 };

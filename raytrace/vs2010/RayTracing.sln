@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "001_SingleSphere", "Examples\001_SingleSphere.vcxproj", "{3BD45B8C-7DA7-4D1E-AE5F-831AB51D1402}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{6C300828-628B-449E-9977-50B6744ECA03}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RayTracing", "RayTracing.vcxproj", "{099A5810-04E3-4856-9517-AFCDEEBBC56F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "002_Perspective", "Examples\002_Perspective.vcxproj", "{54500E3E-2681-4017-9D17-F1FB796757FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3BD45B8C-7DA7-4D1E-AE5F-831AB51D1402}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3BD45B8C-7DA7-4D1E-AE5F-831AB51D1402}.Debug|Win32.Build.0 = Debug|Win32
+		{3BD45B8C-7DA7-4D1E-AE5F-831AB51D1402}.Release|Win32.ActiveCfg = Release|Win32
+		{3BD45B8C-7DA7-4D1E-AE5F-831AB51D1402}.Release|Win32.Build.0 = Release|Win32
+		{099A5810-04E3-4856-9517-AFCDEEBBC56F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{099A5810-04E3-4856-9517-AFCDEEBBC56F}.Debug|Win32.Build.0 = Debug|Win32
+		{099A5810-04E3-4856-9517-AFCDEEBBC56F}.Release|Win32.ActiveCfg = Release|Win32
+		{099A5810-04E3-4856-9517-AFCDEEBBC56F}.Release|Win32.Build.0 = Release|Win32
+		{54500E3E-2681-4017-9D17-F1FB796757FA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{54500E3E-2681-4017-9D17-F1FB796757FA}.Debug|Win32.Build.0 = Debug|Win32
+		{54500E3E-2681-4017-9D17-F1FB796757FA}.Release|Win32.ActiveCfg = Release|Win32
+		{54500E3E-2681-4017-9D17-F1FB796757FA}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3BD45B8C-7DA7-4D1E-AE5F-831AB51D1402} = {6C300828-628B-449E-9977-50B6744ECA03}
+		{54500E3E-2681-4017-9D17-F1FB796757FA} = {6C300828-628B-449E-9977-50B6744ECA03}
+	EndGlobalSection
+EndGlobal

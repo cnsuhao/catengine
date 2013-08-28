@@ -43,7 +43,7 @@ void World::openWindow(int hRes, int vRes)
 	pRenderer_ = SDL_CreateRenderer(pWin_, -1, SDL_RENDERER_ACCELERATED);
 	assert(pRenderer_ != NULL);
 
-	SDL_SetRenderDrawColor(pRenderer_, bgColor_.r, bgColor_.g, bgColor_.b, 255);
+	SDL_SetRenderDrawColor(pRenderer_, (Uint8)(bgColor_.r*255), (Uint8)(bgColor_.g*255), (Uint8)(bgColor_.b*255), 255);
 	SDL_RenderClear(pRenderer_);
 
 	atexit(SDL_Quit);
@@ -78,7 +78,7 @@ RGBColor World::clampToColor(const RGBColor &c) const
 
 RGBColor World::maxToOne(const RGBColor &c) const
 {
-	float maxValue = max(c.r, max(c.g, c.b));
+	float maxValue = (float)max(c.r, max(c.g, c.b));
 	if (maxValue > 1.0)
 		return (c / maxValue);
 	else
@@ -97,7 +97,7 @@ void World::displayPixel(int x, int y, const RGBColor &c)
 	if (vp_.gamma != 1.0)
 		mappedColor = mappedColor.powc(vp_.invGamma);
 
-	SDL_SetRenderDrawColor(pRenderer_, c.r*255, c.g*255, c.b*255, 255);
+	SDL_SetRenderDrawColor(pRenderer_, (Uint8)(c.r*255), (Uint8)(c.g*255), (Uint8)(c.b*255), 255);
 	SDL_RenderDrawPoint(pRenderer_, x, y);
 }
 

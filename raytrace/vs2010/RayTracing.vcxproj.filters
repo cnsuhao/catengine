@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="GeometricObjects">
+      <UniqueIdentifier>{4aae6813-8632-4fb7-9d65-1a73a8f745dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{a79e1373-5cc1-4716-aa1d-ae7ef93536af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tracers">
+      <UniqueIdentifier>{69637827-80ca-4cf8-8af7-9c6f1ed2d76d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Materials">
+      <UniqueIdentifier>{187efa19-e134-47d2-8d0e-5c8dc015f435}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World">
+      <UniqueIdentifier>{a6b885c5-f6e6-4a5c-b4b3-4301767e9673}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\GeometricObjects\GeometricObject.cpp">
+      <Filter>GeometricObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GeometricObjects\Sphere.cpp">
+      <Filter>GeometricObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Utility\Matrix.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Utility\Normal.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Utility\Point2D.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Utility\Point3D.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Utility\Ray.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Utility\RGBColor.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Utility\ShadeRec.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Utility\Vector3D.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Tracers\SingleSphere.cpp">
+      <Filter>Tracers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Tracers\Tracer.cpp">
+      <Filter>Tracers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Materials\Material.cpp">
+      <Filter>Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\World\PerspectiveWorld.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\World\SphereWorld.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\World\ViewPlane.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\World\World.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\GeometricObjects\GeometricObject.h">
+      <Filter>GeometricObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GeometricObjects\Sphere.h">
+      <Filter>GeometricObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utility\Constants.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utility\Maths.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utility\Matrix.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utility\Normal.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utility\Point2D.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utility\Point3D.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utility\Ray.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utility\RGBColor.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utility\ShadeRec.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Utility\Vector3D.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Tracers\SingleSphere.h">
+      <Filter>Tracers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Tracers\Tracer.h">
+      <Filter>Tracers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Materials\Material.h">
+      <Filter>Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\World\PerspectiveWorld.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\World\SphereWorld.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\World\ViewPlane.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\World\World.h">
+      <Filter>World</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
