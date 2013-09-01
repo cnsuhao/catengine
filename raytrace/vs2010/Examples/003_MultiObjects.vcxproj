@@ -10,61 +10,19 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\src\GeometricObjects\GeometricObject.cpp" />
-    <ClCompile Include="..\src\GeometricObjects\Sphere.cpp" />
-    <ClCompile Include="..\src\Materials\Material.cpp" />
-    <ClCompile Include="..\src\Tracers\MultiObjects.cpp" />
-    <ClCompile Include="..\src\Tracers\Tracer.cpp" />
-    <ClCompile Include="..\src\Utility\Matrix.cpp" />
-    <ClCompile Include="..\src\Utility\Normal.cpp" />
-    <ClCompile Include="..\src\Utility\Point2D.cpp" />
-    <ClCompile Include="..\src\Utility\Point3D.cpp" />
-    <ClCompile Include="..\src\Utility\Ray.cpp" />
-    <ClCompile Include="..\src\Utility\RGBColor.cpp" />
-    <ClCompile Include="..\src\Utility\ShadeRec.cpp" />
-    <ClCompile Include="..\src\Utility\Vector3D.cpp" />
-    <ClCompile Include="..\src\World\MultiObjectsWorld.cpp" />
-    <ClCompile Include="..\src\World\PerspectiveWorld.cpp" />
-    <ClCompile Include="..\src\World\SphereWorld.cpp" />
-    <ClCompile Include="..\src\World\ViewPlane.cpp" />
-    <ClCompile Include="..\src\World\World.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\src\GeometricObjects\GeometricObject.h" />
-    <ClInclude Include="..\src\GeometricObjects\Sphere.h" />
-    <ClInclude Include="..\src\Materials\Material.h" />
-    <ClInclude Include="..\src\Tracers\MultiObjects.h" />
-    <ClInclude Include="..\src\Tracers\Tracer.h" />
-    <ClInclude Include="..\src\Utility\Constants.h" />
-    <ClInclude Include="..\src\Utility\Maths.h" />
-    <ClInclude Include="..\src\Utility\Matrix.h" />
-    <ClInclude Include="..\src\Utility\Normal.h" />
-    <ClInclude Include="..\src\Utility\Point2D.h" />
-    <ClInclude Include="..\src\Utility\Point3D.h" />
-    <ClInclude Include="..\src\Utility\Ray.h" />
-    <ClInclude Include="..\src\Utility\RGBColor.h" />
-    <ClInclude Include="..\src\Utility\ShadeRec.h" />
-    <ClInclude Include="..\src\Utility\Vector3D.h" />
-    <ClInclude Include="..\src\World\MultiObjectsWorld.h" />
-    <ClInclude Include="..\src\World\PerspectiveWorld.h" />
-    <ClInclude Include="..\src\World\SphereWorld.h" />
-    <ClInclude Include="..\src\World\ViewPlane.h" />
-    <ClInclude Include="..\src\World\World.h" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{099A5810-04E3-4856-9517-AFCDEEBBC56F}</ProjectGuid>
+    <ProjectGuid>{8D85FAB3-EE25-4519-B859-00B92D003157}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>RayTracing</RootNamespace>
+    <RootNamespace>My003_MultiObjects</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
@@ -80,15 +38,13 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)..\lib\$(Configuration)\</OutDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)..\build\$(ProjectName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)..\lib\$(Configuration)\</OutDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)..\bin\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)..\build\$(ProjectName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -97,7 +53,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(SolutionDir)..\src;$(SolutionDir)..\externals\SDL2\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -113,7 +69,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(SolutionDir)..\src;$(SolutionDir)..\externals\SDL2\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -121,8 +77,13 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\lib\$(Configuration)\;$(SolutionDir)..\externals\SDL2\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;RayTracing.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Examples\MultiObjectsMain.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
