@@ -9,14 +9,10 @@
 class PerspectiveWorld : public World
 {
 public:
-	Sphere sphere;
-
-public:
 	PerspectiveWorld();
 	virtual ~PerspectiveWorld();
 
 	virtual void build();
-	virtual ShadeRec hit(const Ray& ray);
 
 private:
 	virtual void renderSceneInternal();

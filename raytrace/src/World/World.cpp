@@ -1,6 +1,9 @@
 #include "World.h"
-#include "Tracers/Tracer.h"
+#include "Utility/Constants.h"
 #include "Utility/Maths.h"
+#include "Utility/ShadeRec.h"
+#include "Tracers/Tracer.h"
+#include "GeometricObjects/GeometricObject.h"
 #include <assert.h>
 
 World::World() :
@@ -12,6 +15,12 @@ World::World() :
 
 World::~World()
 {
+	for (size_t i = 0; i < objects_.size(); i++)
+	{
+		delete objects_[i];
+	}
+	objects_.clear();
+
 	if (pTracer_)
 	{
 		delete pTracer_;
@@ -29,6 +38,31 @@ World::~World()
 		SDL_DestroyWindow(pWin_);
 		pWin_ = NULL;
 	}
+}
+
+void World::addObject(GeometricObject* obj)
+{
+	objects_.push_back(obj);
+}
+
+ShadeRec World::hit(const Ray& ray)
+{
+	ShadeRec sr;
+	double t;
+	double tmin = kHugeValue;
+	int numObjects = objects_.size();
+
+	for (int i = 0; i < numObjects; i++)
+	{
+		if (objects_[i]->hit(ray, t, sr) && (t < tmin))
+		{
+			sr.hitAnObject = true;
+			tmin = t;
+			sr.color = objects_[i]->getColor();
+		}
+	}
+
+	return sr;
 }
 
 void World::openWindow(int hRes, int vRes)
@@ -94,7 +128,7 @@ void World::displayPixel(int x, int y, const RGBColor &c)
 	else
 		mappedColor = maxToOne(c);
 
-	if (vp_.gamma != 1.0)
+	if (vp_.gamma != 1.0f)
 		mappedColor = mappedColor.powc(vp_.invGamma);
 
 	SDL_SetRenderDrawColor(pRenderer_, (Uint8)(c.r*255), (Uint8)(c.g*255), (Uint8)(c.b*255), 255);

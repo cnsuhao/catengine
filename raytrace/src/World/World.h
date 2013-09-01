@@ -1,15 +1,16 @@
-#ifndef RAYTRACE_WORLD_H
-#define RAYTRACE_WORLD_H
+#pragma once
 
 #include "ViewPlane.h"
 #include "Utility/RGBColor.h"
 #include "Utility/ShadeRec.h"
+#include <vector>
 #if defined(_WIN32)
 #include <SDL.h>
 #else
 #include <SDL2/SDL.h>
 #endif
 
+class GeometricObject;
 class Tracer;
 class Ray;
 
@@ -20,7 +21,9 @@ public:
 	virtual ~World();
 
 	virtual void build() = 0;
-	virtual ShadeRec hit(const Ray& ray) = 0;
+
+	void addObject(GeometricObject* obj);
+	ShadeRec hit(const Ray& ray);
 
 	void renderScene();
 	RGBColor getBgColor() { return bgColor_; }
@@ -29,6 +32,7 @@ protected:
 	ViewPlane vp_;
 	RGBColor bgColor_;
 	Tracer *pTracer_;
+	std::vector<GeometricObject*> objects_;
 
 protected:
 	void displayPixel(int x, int y, const RGBColor& c);
@@ -46,4 +50,3 @@ private:
 	SDL_Renderer *pRenderer_;
 };
 
-#endif

@@ -26,8 +26,6 @@ private:
 	Point3D center_;
 	double  radius_;
 	RGBColor color_;
-
-	static const double kEpsilon;
 };
 
 inline void Sphere::setCenter(const Point3D& c)

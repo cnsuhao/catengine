@@ -2,12 +2,18 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "001_SingleSphere", "Examples\001_SingleSphere.vcxproj", "{3BD45B8C-7DA7-4D1E-AE5F-831AB51D1402}"
+	ProjectSection(ProjectDependencies) = postProject
+		{099A5810-04E3-4856-9517-AFCDEEBBC56F} = {099A5810-04E3-4856-9517-AFCDEEBBC56F}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{6C300828-628B-449E-9977-50B6744ECA03}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RayTracing", "RayTracing.vcxproj", "{099A5810-04E3-4856-9517-AFCDEEBBC56F}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "002_Perspective", "Examples\002_Perspective.vcxproj", "{54500E3E-2681-4017-9D17-F1FB796757FA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{099A5810-04E3-4856-9517-AFCDEEBBC56F} = {099A5810-04E3-4856-9517-AFCDEEBBC56F}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

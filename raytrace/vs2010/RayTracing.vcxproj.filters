@@ -48,9 +48,6 @@
     <ClCompile Include="..\src\Utility\Vector3D.cpp">
       <Filter>Utility</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Tracers\SingleSphere.cpp">
-      <Filter>Tracers</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\Tracers\Tracer.cpp">
       <Filter>Tracers</Filter>
     </ClCompile>
@@ -68,6 +65,9 @@
     </ClCompile>
     <ClCompile Include="..\src\World\World.cpp">
       <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Tracers\MultiObjects.cpp">
+      <Filter>Tracers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -107,9 +107,6 @@
     <ClInclude Include="..\src\Utility\Vector3D.h">
       <Filter>Utility</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Tracers\SingleSphere.h">
-      <Filter>Tracers</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\Tracers\Tracer.h">
       <Filter>Tracers</Filter>
     </ClInclude>
@@ -127,6 +124,9 @@
     </ClInclude>
     <ClInclude Include="..\src\World\World.h">
       <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Tracers\MultiObjects.h">
+      <Filter>Tracers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

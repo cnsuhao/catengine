@@ -1,5 +1,5 @@
 #include "SphereWorld.h"
-#include "Tracers/SingleSphere.h"
+#include "Tracers/MultiObjects.h"
 #include "Utility/Vector3D.h"
 #include "Utility/Ray.h"
 #include <stdlib.h>
@@ -18,25 +18,13 @@ void SphereWorld::build()
 	vp_.setPixelSize(1.0f);
 	vp_.setGamma(1.8f);
 
-	pTracer_ = new SingleSphere(this);
+	pTracer_ = new MultiObjects(this);
 
-	sphere.setCenter(0.0, 0.0, 0.0);
-	sphere.setRadius(85.0);
-	sphere.setColor(RGBColor::BLUE);
-}
-
-ShadeRec SphereWorld::hit(const Ray& ray)
-{
-	ShadeRec sr;
-	double t;
-
-	if (sphere.hit(ray, t, sr))
-	{
-		sr.hitAnObject = true;
-		sr.color       = sphere.getColor();
-	}
-
-	return sr;
+	Sphere *sphere = new Sphere;
+	sphere->setCenter(0.0, 0.0, 0.0);
+	sphere->setRadius(85.0);
+	sphere->setColor(RGBColor::BLUE);
+	addObject(sphere);
 }
 
 void SphereWorld::renderSceneInternal()

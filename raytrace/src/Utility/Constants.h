@@ -12,6 +12,6 @@ const double 	invTWO_PI  = 0.1591549430918953358;
 const double 	kEpsilon   = 0.0001; 
 const double	kHugeValue = 1.0E10;
 
-const float 	invRAND_MAX = 1.0 / (float)RAND_MAX;
+const float 	invRAND_MAX = 1.0f / (float)RAND_MAX;
 
 #endif

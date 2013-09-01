@@ -1,5 +1,5 @@
 #include "PerspectiveWorld.h"
-#include "Tracers/SingleSphere.h"
+#include "Tracers/MultiObjects.h"
 #include "Utility/Vector3D.h"
 #include "Utility/Ray.h"
 #include <stdlib.h>
@@ -18,25 +18,7 @@ void PerspectiveWorld::build()
 	vp_.setPixelSize(1.0f);
 	vp_.setGamma(1.8f);
 
-	pTracer_ = new SingleSphere(this);
-
-	sphere.setCenter(0.0, 0.0, 0.0);
-	sphere.setRadius(85.0);
-	sphere.setColor(RGBColor::BLUE);
-}
-
-ShadeRec PerspectiveWorld::hit(const Ray& ray)
-{
-	ShadeRec sr;
-	double t;
-
-	if (sphere.hit(ray, t, sr))
-	{
-		sr.hitAnObject = true;
-		sr.color       = sphere.getColor();
-	}
-
-	return sr;
+	pTracer_ = new MultiObjects(this);
 }
 
 void PerspectiveWorld::renderSceneInternal()

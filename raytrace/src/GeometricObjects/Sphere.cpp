@@ -1,8 +1,7 @@
 #include "Sphere.h"
+#include "Utility/Constants.h"
 #include "Utility/ShadeRec.h"
 #include <math.h>
-
-const double Sphere::kEpsilon = 0.001;
 
 Sphere::Sphere() :
 	GeometricObject(),

@@ -1,5 +1,4 @@
-#ifndef RAYTRACEVIEWPLANEH
-#define RAYTRACEVIEWPLANEH
+#pragma once
 
 class ViewPlane
 {
@@ -26,4 +25,3 @@ public:
 	void setSamples(const int n) { numSamples = n; }
 };
 
-#endif

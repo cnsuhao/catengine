@@ -14,7 +14,7 @@
     <ClCompile Include="..\src\GeometricObjects\GeometricObject.cpp" />
     <ClCompile Include="..\src\GeometricObjects\Sphere.cpp" />
     <ClCompile Include="..\src\Materials\Material.cpp" />
-    <ClCompile Include="..\src\Tracers\SingleSphere.cpp" />
+    <ClCompile Include="..\src\Tracers\MultiObjects.cpp" />
     <ClCompile Include="..\src\Tracers\Tracer.cpp" />
     <ClCompile Include="..\src\Utility\Matrix.cpp" />
     <ClCompile Include="..\src\Utility\Normal.cpp" />
@@ -33,7 +33,7 @@
     <ClInclude Include="..\src\GeometricObjects\GeometricObject.h" />
     <ClInclude Include="..\src\GeometricObjects\Sphere.h" />
     <ClInclude Include="..\src\Materials\Material.h" />
-    <ClInclude Include="..\src\Tracers\SingleSphere.h" />
+    <ClInclude Include="..\src\Tracers\MultiObjects.h" />
     <ClInclude Include="..\src\Tracers\Tracer.h" />
     <ClInclude Include="..\src\Utility\Constants.h" />
     <ClInclude Include="..\src\Utility\Maths.h" />
