@@ -14,11 +14,10 @@ public:
 
 	Sphere& operator=(const Sphere& sphere);
 
-	virtual Sphere* clone() const;
 	void setCenter(const Point3D& c);
 	void setCenter(double x, double y, double z);
 	void setRadius(double r);
-	virtual bool hit(const Ray& ray, double& t, ShadeRec& s) const;
+	virtual bool hit(const Ray& ray, double& tmin, ShadeRec& sr) const;
 	virtual RGBColor getColor() const { return color_; };
 	void setColor(const RGBColor& c) { color_ = c; }
 

@@ -2,6 +2,8 @@
 #include "Tracers/MultiObjects.h"
 #include "Utility/Vector3D.h"
 #include "Utility/Ray.h"
+#include "GeometricObjects/Sphere.h"
+#include "GeometricObjects/Plane.h"
 #include <stdlib.h>
 #include <assert.h>
 
@@ -29,6 +31,10 @@ void MultiObjectsWorld::build()
 	sphere = new Sphere(Point3D(0,0,0), 60);
 	sphere->setColor(RGBColor::RED);
 	addObject(sphere);
+
+	Plane *plane = new Plane(Point3D(0, 0, 0), Normal(0, 1, 1));
+	plane->setColor(RGBColor(0.0f, 0.3f, 0.0f));
+	addObject(plane);
 }
 
 void MultiObjectsWorld::renderSceneInternal()

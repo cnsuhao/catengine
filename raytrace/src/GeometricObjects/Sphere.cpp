@@ -23,11 +23,6 @@ Sphere::Sphere(const Sphere& sphere) :
 	radius_(sphere.radius_)
 {}
 
-Sphere* Sphere::clone() const
-{
-	return new Sphere(*this);
-}
-
 Sphere& Sphere::operator=(const Sphere& rhs)
 {
 	if (this == &rhs)

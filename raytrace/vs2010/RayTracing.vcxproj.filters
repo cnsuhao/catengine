@@ -72,6 +72,9 @@
     <ClCompile Include="..\src\World\MultiObjectsWorld.cpp">
       <Filter>World</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\GeometricObjects\Plane.cpp">
+      <Filter>GeometricObjects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\GeometricObjects\GeometricObject.h">
@@ -133,6 +136,9 @@
     </ClInclude>
     <ClInclude Include="..\src\World\MultiObjectsWorld.h">
       <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GeometricObjects\Plane.h">
+      <Filter>GeometricObjects</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

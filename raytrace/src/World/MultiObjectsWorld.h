@@ -3,7 +3,6 @@
 // chap03, multi-objects world
 
 #include "World.h"
-#include "GeometricObjects/Sphere.h"
 
 class MultiObjectsWorld : public World
 {

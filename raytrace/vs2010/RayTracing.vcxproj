@@ -12,6 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\GeometricObjects\GeometricObject.cpp" />
+    <ClCompile Include="..\src\GeometricObjects\Plane.cpp" />
     <ClCompile Include="..\src\GeometricObjects\Sphere.cpp" />
     <ClCompile Include="..\src\Materials\Material.cpp" />
     <ClCompile Include="..\src\Tracers\MultiObjects.cpp" />
@@ -32,6 +33,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\GeometricObjects\GeometricObject.h" />
+    <ClInclude Include="..\src\GeometricObjects\Plane.h" />
     <ClInclude Include="..\src\GeometricObjects\Sphere.h" />
     <ClInclude Include="..\src\Materials\Material.h" />
     <ClInclude Include="..\src\Tracers\MultiObjects.h" />

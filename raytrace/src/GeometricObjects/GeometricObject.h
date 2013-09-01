@@ -14,9 +14,7 @@ public:
 	GeometricObject(const GeometricObject& object);
 	virtual ~GeometricObject();
 
-	virtual GeometricObject* clone() const = 0;
-	virtual bool hit(const Ray& ray, double& t, ShadeRec& s) const = 0;
-
+	virtual bool hit(const Ray& ray, double& tmin, ShadeRec& sr) const = 0;
 	virtual RGBColor getColor() const = 0;
 
 	Material* getMaterial() const { return pMaterial_; }
